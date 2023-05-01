@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', credentialsId: 'github-tokens', url: 'https://github.com/Vikas4577/hr-api'
-            }
-        }
         stage('Maven Build') {
             steps {
                 sh 'mvn clean package'
