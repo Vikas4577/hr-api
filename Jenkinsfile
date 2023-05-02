@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: "${params.branchname}", credentialsId: 'github-tokens', url: 'https://github.com/Vikas4577/hr-api'
+                git branch: "${params.branchName}", credentialsId: 'github-tokens', url: 'https://github.com/Vikas4577/hr-api'
             }
         }
 
