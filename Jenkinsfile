@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                git branch: "${params.branchName}", credentialsId: 'github-tokens', url: 'https://github.com/Vikas4577/hr-api'
+                git branch: "${params.branchName}", credentialsId: 'github-token', url: 'https://github.com/Vikas4577/hr-api'
             }
         }
 
