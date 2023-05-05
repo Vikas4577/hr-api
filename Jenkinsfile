@@ -4,12 +4,22 @@ pipeline {
 
     stages {
         stage('Git Checkout') {
+            when{
+                expression{
+                params.branchaname == "develop"
+                }
+            }
             steps {
                 git branch: "${params.branchName}", credentialsId: 'github-tokens', url: 'https://github.com/Vikas4577/hr-api'
             }
         }
 
         stage('Maven Build') {
+            when{
+                expression{
+                params.branchaname == "develop"
+                }
+            }
             steps {
                 sh 'mvn clean package'
             }
