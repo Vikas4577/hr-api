@@ -6,7 +6,7 @@ pipeline {
         stage('Git Checkout') {
             when{
                 expression{
-                params.branchaname == "develop"
+                params.branchName == "develop"
                 }
             }
             steps {
@@ -17,7 +17,7 @@ pipeline {
         stage('Maven Build') {
             when{
                 expression{
-                params.branchaname == "develop"
+                params.branchName == "develop"
                 }
             }
             steps {
